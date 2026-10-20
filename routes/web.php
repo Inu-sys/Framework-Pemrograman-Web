@@ -22,6 +22,8 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware('auth')
     ->name('dashboard');
 
+Route::resource('categories', CategoryController::class);
+
 Route::get('/login', [LoginController::class, 'create'])
     ->middleware('guest')
     ->name('login');

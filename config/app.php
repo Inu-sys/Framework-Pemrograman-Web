@@ -123,4 +123,12 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Stock Threshold Configuration
+    |--------------------------------------------------------------------------
+    */
+
+    'low_stock_threshold' => env('LOW_STOCK_THRESHOLD', 10),
+
 ];
