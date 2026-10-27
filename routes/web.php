@@ -58,10 +58,11 @@ Route::middleware(['auth', 'role:admin,kasir'])->group(function () {
         ->name('pos.store');
 });
 
+
 Route::middleware(['auth', 'role:admin,kasir'])->group(function () {
     Route::get('/pos', [PosController::class, 'index'])->name('pos.index');
     Route::post('/pos', [PosController::class, 'store'])->name('pos.store');
-    Route::get('/pos/history', function () {
-        return 'Halaman Riwayat Transaksi';
-    })->name('pos.history');
+    Route::get('/pos/{transaction}/struk', [PosController::class, 'struk'])->name('pos.struk');
 });
+
+
