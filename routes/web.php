@@ -63,6 +63,6 @@ Route::middleware(['auth', 'role:admin,kasir'])->group(function () {
     Route::get('/pos', [PosController::class, 'index'])->name('pos.index');
     Route::post('/pos', [PosController::class, 'store'])->name('pos.store');
     Route::get('/pos/{transaction}/struk', [PosController::class, 'struk'])->name('pos.struk');
+    Route::get('/reports/sales', [ReportController::class, 'sales'])->name('report.sales');
+    Route::get('/reports/sales/export', [ReportController::class, 'export'])->name('report.export');
 });
-
-
